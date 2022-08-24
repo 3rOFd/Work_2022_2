@@ -9,7 +9,7 @@
 int main()
 {
    double R,a,d;
-   printf("Enter the length of the radius, then the length of the side of the triangle, and then the length of the side of the square: ");
+   printf(" Enter the length of the radius, then the length of the side of the triangle, and then\n the length of the side of the square and we will find out which figure has the largest area: ");
    scanf("%lf %lf %lf",&R,&a,&d);
    double S_c, S_t, S_s;
    S_c = M_PI*pow(2,R);
