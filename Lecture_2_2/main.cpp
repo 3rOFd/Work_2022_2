@@ -14,7 +14,7 @@ int main()
    scanf("%lf %lf %lf",&R,&a,&d);
    double S_c, S_t, S_s;
    S_c = M_PI*pow(2,R);
-   S_t=pow(2,a) * sin(M_PI/3);
+   S_t=(pow(2,a) * sin(M_PI/3))/2;
    S_s=d*d;
    printf("Answer: %s\n",(S_c==S_s&&S_c==S_t&&S_s==S_t)?"areas are the same": (S_c>S_t&&S_c>S_s)?"circle":(S_t>S_s)? "triangle":"square");
 }
