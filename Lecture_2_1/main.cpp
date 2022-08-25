@@ -12,5 +12,5 @@ int main()
     y1=2*cos(x-M_PI/6)+sqrt(2);
     y2=1/(2*log(x))+sin(pow(2,x))*sin(pow(2,x));
     Y=y1/y2*exp(3*x);
-    (x<=1)? printf("Error\n"): printf("Answer: %lf\n",Y);
+    (x<=0||x==1)? printf("Error\n"): printf("Answer: %lf\n",Y);
 }
