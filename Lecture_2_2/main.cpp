@@ -2,9 +2,9 @@
     Task: Write a program that determines the area of which figure is larger: a circle of radius R,
           an equilateral triangle with side length a, or a square with side length d. (using ?:).
 */
-#include <stdio.h>
-#include<math.h>
 
+#include<math.h>
+#include <stdio.h>
 
 int main()
 {
