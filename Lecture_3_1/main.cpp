@@ -9,7 +9,7 @@ int main()
     printf("Please enter N: ");
     int N;
     scanf ("%d",&N);
-    if(N<0) printf("Error");
+    if(N<=0) printf("Error");
     else
     {
         int amount=0;
