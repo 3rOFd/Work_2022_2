@@ -3,8 +3,9 @@
           an equilateral triangle with side length a, or a square with side length d. (using ?:).
 */
 
-#include<math.h>
 #include <stdio.h>
+#include<math.h>
+
 
 int main()
 {
