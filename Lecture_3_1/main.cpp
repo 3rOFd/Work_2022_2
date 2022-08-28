@@ -7,13 +7,17 @@
 int main()
 {
     printf("Please enter N: ");
-    unsigned int N;
-    scanf ("%u",&N);
-    int amount=0;
-    while(N>0)
+    int N;
+    scanf ("%d",&N);
+    if(N<0) printf("Error");
+    else
     {
-        ++amount;
-        N/=10;
+        int amount=0;
+        while(N>0)
+        {
+            ++amount;
+            N/=10;
+        }
+        printf("Answer: %d\n",amount);
     }
-    printf("Answer: %d\n",amount);
 }
