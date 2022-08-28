@@ -9,7 +9,7 @@ int main()
     printf("Please enter x, then y and z: ");
     int x,y,z;
     scanf ("%d %d %d",&x, &y, &z);
-    if(x<=0 || y<=0 || z<=0) printf("Error");
+    if(x<=0 || y<=0 || z==0) printf("Error");
     else
     {
         int n = x>y && x>z? x:y>z? y:z;
