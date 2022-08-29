@@ -34,9 +34,8 @@ int main()
                 if(result < eps) break;
                 amount += result;
                 ++n;
-                continue;
             }
-            if(n % 2 != 0)
+            else
             {
                 auto divided = ((2 * n - 1) * second_last_even * pow(x, 2 * n + 1));
                 auto divider = double(((2 * n) * l_last * (2 * n + 1)));
