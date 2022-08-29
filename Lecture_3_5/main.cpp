@@ -1,5 +1,5 @@
 /*
-    Task: Translate a number from decimal to binary.
+    Task: the sum of the row with an accuracy of 10^-5, where 0.05<x<1
 */
 
 #include<math.h>
