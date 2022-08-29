@@ -14,19 +14,39 @@ int main()
     double amount = 0;
     scanf("%lf", &x);
 
-    if(x < 0.05 || x > 1) printf("Error");
+    if(x <= 0.05 || x >= 1) printf("Error");
     else
     {
         int n = 1;
+        double last_value_even = 1;
+        double last = 1;
+        double second_last_even = 1;
+        double l_last = 1;
        //amount += x;
         while(true)
         {
-            auto divided = ((2 * n - 1) * pow(x, 2 * n + 1));
-            auto divider = double(((2 * n) * (2 * n + 1)));
-            result = divided / divider;
-            if(result < eps) break;
-            amount += result;
-            ++n;
+            if(n % 2 == 0)
+            {
+                auto divided = ((2 * n - 1) * last_value_even * pow(x, 2 * n + 1));
+                auto divider = double(((2 * n) * last * (2 * n + 1)));
+                result = divided / divider;
+                last_value_even = 2 * n - 1;
+                last = 2 * n;
+                if(result < eps) break;
+                amount += result;
+                n += 2;
+            }
+            if(n % 2 != 0)
+            {
+                auto divided = ((2 * n - 1) * second_last_even * pow(x, 2 * n + 1));
+                auto divider = double(((2 * n) * l_last * (2 * n + 1)));
+                result = divided / divider;
+                second_last_even = 2 * n - 1;
+                l_last = 2 * n;
+                if(result < eps) break;
+                amount += result;
+                ++n;
+            }
         }
         printf("Answer: %lf\n", amount);
     }
