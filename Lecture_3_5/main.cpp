@@ -22,7 +22,6 @@ int main()
         double last = 1;
         double second_last_even = 1;
         double l_last = 1;
-       //amount += x;
         while(true)
         {
             if(n % 2 == 0)
@@ -34,7 +33,8 @@ int main()
                 last = 2 * n;
                 if(result < eps) break;
                 amount += result;
-                n += 2;
+                ++n;
+                continue;
             }
             if(n % 2 != 0)
             {
