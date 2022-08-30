@@ -26,22 +26,22 @@ int main()
         {
             if(n % 2 == 0)
             {
-                auto divided = ((2 * n - 1) * first_value_even * pow(x, 2 * n + 1));
-                auto divider = double(((2 * n) * last_value_even * (2 * n + 1)));
+                double divided = ((2 * n - 1) * first_value_even * pow(x, 2 * n + 1));
+                double divider = double(((2 * n) * last_value_even * (2 * n + 1)));
                 result = divided / divider;
-                first_value_even = 2 * n - 1;
-                last_value_even = 2 * n;
+                first_value_even *= 2 * n - 1;
+                last_value_even *= 2 * n;
                 if(result < eps) break;
                 amount += result;
                 ++n;
             }
             else
             {
-                auto divided = ((2 * n - 1) * first_last_odd * pow(x, 2 * n + 1));
-                auto divider = double(((2 * n) * last_value_odd * (2 * n + 1)));
+                double divided = ((2 * n - 1) * first_last_odd * pow(x, 2 * n + 1));
+                double divider = double(((2 * n) * last_value_odd * (2 * n + 1)));
                 result = divided / divider;
-                first_last_odd = 2 * n - 1;
-                last_value_odd = 2 * n;
+                first_last_odd *= 2 * n - 1;
+                last_value_odd *= 2 * n;
                 if(result < eps) break;
                 amount += result;
                 ++n;
