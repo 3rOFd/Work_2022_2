@@ -10,10 +10,13 @@ int main()
     printf("Enter the number N: ");
     int n, answer = 0;
     scanf("%d", &n);
-    for(int i = 0; n > 0; ++i)
-    {
+    int i = 0;
+    while( n > 0)
+    {        
         answer += (n % 2) * pow(10, i);
-        n /= 2;
+        n >>= 1;
+        ++i;
+
     }
     printf("Answer: %d\n", answer);
 }
