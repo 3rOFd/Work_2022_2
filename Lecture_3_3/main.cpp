@@ -29,7 +29,7 @@ int main()
             printf("0");
             --k;
 
-        }
+        }      
         printf("%d\n", y);
 
     }
