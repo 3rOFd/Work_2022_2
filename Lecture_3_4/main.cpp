@@ -11,7 +11,7 @@ int main()
     int n, answer = 0;
     scanf("%d", &n);
     int i = 0;
-    while( n > 0)
+    while(n > 0)
     {        
         answer += (n % 2) * pow(10, i);
         n >>= 1;
