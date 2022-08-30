@@ -1,5 +1,6 @@
 /*
-    Task: Given a natural number N. Write a program to determine the number of digits in this number.
+    Task: Find the smallest common divisor of three natural numbers
+    (1 will be considered the smallest common divisor only if the given numbers have no other common divisors).
 */
 
 #include<stdio.h>
