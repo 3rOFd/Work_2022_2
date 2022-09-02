@@ -9,44 +9,26 @@
 int main()
 {
     printf("Enter the x in the range 0.05 < x < 1: ");
-    double x, eps = 1e-5;
-    double result = 0;
-    double amount = 1;
+    double x, eps = 0.00001;
+    double result = 1;
     scanf("%lf", &x);
-
     if(x <= 0.05 || x >= 1) printf("Error");
     else
     {
         int n = 1;
-        double first_value_even = 1;
-        double last_value_even = 1;
-        double first_last_odd = 1;
-        double last_value_odd = 1;
-        while(true)
+        double amount = x;
+        int first_factorial = 1;
+        int second_factorial = 1;
+
+        while(result > eps)
         {
-            if(n % 2 == 0)
-            {
-                double divided = ((2 * n - 1) * first_value_even * pow(x, 2 * n + 1));
-                double divider = double(((2 * n) * last_value_even * (2 * n + 1)));
-                result = divided / divider;
-                first_value_even *= 2 * n - 1;
-                last_value_even *= 2 * n;
-                if(result < eps) break;
-                amount += result;
-                ++n;
-            }
-            else
-            {
-                double divided = ((2 * n - 1) * first_last_odd * pow(x, 2 * n + 1));
-                double divider = double(((2 * n) * last_value_odd * (2 * n + 1)));
-                result = divided / divider;
-                first_last_odd *= 2 * n - 1;
-                last_value_odd *= 2 * n;
-                if(result < eps) break;
-                amount += result;
-                ++n;
-            }
+            first_factorial *= (2 * n - 1);
+            second_factorial *= 2 * n;
+            result *= (first_factorial * pow(x,(2 * n + 1))) / (second_factorial * (2 * n + 1));
+            amount += result;
+            ++n;
         }
+
         printf("Answer: %lf\n", amount);
     }
 }
