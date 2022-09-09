@@ -13,13 +13,22 @@ int main()
     int i = 0;
     while(M[i] != 0)
     {
-        if(M[i] == '(' || ')')
+        if(M[i] == '(')
         {
             ++n;
         }
+        if(M[0] == ')')
+        {
+            printf("incorrect brackets");
+            return 1;
+        }
+        else if(M[i] == ')')
+        {
+            --n;
+        }
         ++i;
     }
-    if(n % 2 == 0 )
+    if(n == 0 )
     {
         printf("correct parentheses");
     }
