@@ -2,6 +2,7 @@
     Determine the location of elements of array A (30) that do not occur in array B (15)
 */
 
+#include"Determine.h"
 #include <stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -27,20 +28,6 @@ int main()
     }
     printf("\n\nThe numbers of matrix A that do not occur in matrix B:\n");
 
-    for(int i = 0; i < size_A; ++i)
-    {
-        bool compare = false;
-        for(int j = 0; j < size_B; ++j)
-        {
-            if(A[i] == B[j])
-            {
-                compare = true;
-                break;
-            }
-        }
-        if(!compare)
-        printf("%d ", i);
-
-    }
+    calculation(A, B, size_A, size_B);
     return 0;
 }
