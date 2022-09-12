@@ -7,7 +7,7 @@ void smallest_divisior(int x, int y, int z)
     {
         int n = x > y && x > z ? x : y > z ? y : z;
         /*
-            Often the smallest common divisor is found in the initial stages of number decomposition,
+            Ofte the smallest common divisor is found in the initial stages of number decomposition,
             the larger the numbers become, the less likely to meet the smallest common divisor,
             if it is found, the counter will still go to the largest number, which eliminates the loss
 
