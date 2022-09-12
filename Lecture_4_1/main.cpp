@@ -2,6 +2,7 @@
     Swap the maximal and the last negative elements of the array M(40)
 */
 
+#include"swap_in_matrix.h"
 #include <stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -17,9 +18,9 @@ int main()
     for(int i = 0; i < 40; ++i)
     {
        M[i] = rand() % 201 - 100; //range -100 to 100
-       printf("%d ", M[i]);
 
     }
+    entry(M, size);
     printf("\n");
     //calculated values
     for(int i = 0; i < 40; ++i)
@@ -35,14 +36,6 @@ int main()
 
     }
 
-    int tmp = M[max];
-    M[max] = M[last_negative];
-    M[last_negative] = tmp;
-
-    for(int i = 0; i < 40; ++i)
-    {
-        printf("%d ", M[i]);
-
-    }
+    print_matrix(M, max, last_negative, size);
     return 0;
 }
