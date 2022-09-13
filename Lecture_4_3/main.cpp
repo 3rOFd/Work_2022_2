@@ -2,6 +2,7 @@
     A matrix of size 7x7 is given. Swap the k-th column with the k-th row.
 */
 
+#include"Swap_clmn_with_row.h"
 #include <stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -33,22 +34,7 @@ int main()
     --s;
     c = s;
     int j = 0;
-    for(int i = 0; i < 7; ++i)
-    {
-            int temp = M[s][i];
-            M[s][i] = M[j][c];
-            M[j][c] = temp;
-            ++j;
-    }
-
-    for(int i = 0; i < 7; ++i)
-    {
-        for(int j = 0; j < 7; ++j)
-        {
-            printf("%d ", M[i][j]);
-        }
-          printf("\n");
-    }
+    swap_in_matrix(c, s, j, M);
 
     return 0;
 }
