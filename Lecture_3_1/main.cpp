@@ -10,6 +10,7 @@ int main()
     int N;
     scanf ("%d", &N);
     int amount = 0;
-    natural_number(N, amount);
+    natural_number(N);
+    printf("Answer: %d\n", amount);
     return 0;
 }
