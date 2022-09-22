@@ -10,7 +10,8 @@ int main()
 {
     printf("Please enter x, then y and z: ");
     int x, y, z;
+    int k = 0;
     scanf ("%d %d %d", &x, &y, &z);
     smallest_divisior(x, y, z);
-    return 0;
+    printf("Answer: %d\n", k);
 }
